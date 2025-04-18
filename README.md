@@ -8,7 +8,11 @@
 
 > The context of these perdonal studies is strictly technical.
 
-> There is no interest whatsoever in addressing political and religious issues. Please do not use any terms out of context.
+> There is no interest whatsoever in addressing political and religious issues.
+
+> Please do not use any terms out of context.
+
+>  Not finished
 
 
 [![My Skills](https://skillicons.dev/icons?i=azure,java,redis,kubernetes,docker,spring)](https://skillicons.dev)
@@ -499,4 +503,7 @@ az aks create --name $MY_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
 
 ----------------------------------------------------------------------------------------------------------------------
 
-[![Generic badge](https://img.shields.io/badge/status-development-yellow.svg)](/#/)
+
+
+
+Status: Still in development
