@@ -2,13 +2,12 @@
 
 
 >[!IMPORTANT]
+>
 > Official documentation:
 > 
 > https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-
 
-> The context of these perdonal studies is strictly technical.
-
-> There is no interest whatsoever in addressing political and religious issues.
+> The context of these personal studies is strictly technical.
 
 > Please do not use any terms out of context.
 
@@ -503,6 +502,7 @@ az aks create --name $MY_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
 
 ----------------------------------------------------------------------------------------------------------------------
 
+> There is no interest whatsoever in addressing political and religious issues. Absolutely none
 
 
 
