@@ -459,12 +459,6 @@ az group create --name $_RESOURCE_GROUP_NAME --location $REGION
 az aks create --name $_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
 ```
 
->[!NOTE] 
->
-> Official documentation:
-> 
-> https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-
-
 
 >[!TIP]
 >
@@ -476,7 +470,11 @@ az aks create --name $_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
 
 ![workflow](imgs/azure.png)
 
-- https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-
+>[!NOTE] 
+>
+> Official documentation:
+> 
+> https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-
 
 ![workflow](imgs/workflow.png)
 
