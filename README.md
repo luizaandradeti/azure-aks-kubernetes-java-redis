@@ -1,23 +1,9 @@
 # Redis with Spring Boot
 
 
->[!IMPORTANT]
->
-> Official documentation:
-> 
-> https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-
-
-> The context of these personal studies is strictly technical.
-
-> Please do not use any terms out of context.
-
->  Not finished
-
-
 [![My Skills](https://skillicons.dev/icons?i=azure,java,redis,kubernetes,docker,spring)](https://skillicons.dev)
 
 Benefitis of Redis:
-
 
 - Agility, which positively impacts the customer experience;
 - Useful for recommendation systems;
@@ -28,10 +14,9 @@ Benefitis of Redis:
     <i>
         
     "Many applications use backend databases, such as SQL Server, when applications require frequent access to data. The cost of maintaining these backend services to cope with demand can be high, but you can use an effective caching strategy to reduce load on backend databases by reducing sizing and scaling requirements. This can help you reduce costs and improve the performance of your applications. Caching is a useful technique to save on costs related to read heavy workloads that use more expensive resources such as SQL Server. (https://docs.aws.amazon.com/prescriptive-guidance/latest/optimize-costs-microsoft-workloads/net-caching.html)"
-            
-                    
+                                
     </i> 
-    
+
 Essential reading:
 
 - [Best practices development](https://learn.microsoft.com/pt-br/azure/azure-cache-for-redis/cache-best-practices-development)
@@ -72,6 +57,12 @@ Use examples images (Microsoft, Azure):
         + [Create a service Redis into Azure](#create-a-redis-azure-)
         + [Connect Redis Azure For Redis with Java](#connect-azure-cache-for-redis-with-java-setup-the-test-in-main-class-)
     * [Docker build](#docker-build)
+
+>[!NOTE] 
+
+> The context of these personal studies is strictly technical. There is no interest whatsoever in addressing political and religious issues.
+
+> Please do not use any terms out of context.
 
 
 ## Tech Stack
@@ -464,11 +455,15 @@ set MY_DNS_LABEL="mydnslabelXyz
 Create AKS Cluster
 
 ```bash
-az group create --name $MY_RESOURCE_GROUP_NAME --location $REGION
-az aks create --name $MY_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
+az group create --name $_RESOURCE_GROUP_NAME --location $REGION
+az aks create --name $_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
 ```
 
-
+>[!NOTE] 
+>
+> Official documentation:
+> 
+> https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-
 
 
 >[!TIP]
@@ -478,7 +473,6 @@ az aks create --name $MY_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
 ![Plugin](imgs/plugin.png)
 
 ### Workflow 
-
 
 ![workflow](imgs/azure.png)
 
@@ -502,7 +496,10 @@ az aks create --name $MY_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
 
 ----------------------------------------------------------------------------------------------------------------------
 
-> There is no interest whatsoever in addressing political and religious issues. Absolutely none
+
+
+
+
 
 
 
