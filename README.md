@@ -58,10 +58,8 @@ Use examples images (Microsoft, Azure):
         + [Connect Redis Azure For Redis with Java](#connect-azure-cache-for-redis-with-java-setup-the-test-in-main-class-)
     * [Docker build](#docker-build)
 
->[!NOTE] 
-
+> [!NOTE] 
 > The context of these personal studies is strictly technical. There is no interest whatsoever in addressing political and religious issues.
-
 > Please do not use any terms out of context.
 
 
