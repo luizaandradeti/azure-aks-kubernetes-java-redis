@@ -1,9 +1,9 @@
 # Redis with Spring Boot
 
-
 [![My Skills](https://skillicons.dev/icons?i=azure,java,redis,kubernetes,docker,spring)](https://skillicons.dev)
 
 Benefitis of Redis:
+
 
 - Agility, which positively impacts the customer experience;
 - Useful for recommendation systems;
@@ -14,9 +14,9 @@ Benefitis of Redis:
     <i>
         
     "Many applications use backend databases, such as SQL Server, when applications require frequent access to data. The cost of maintaining these backend services to cope with demand can be high, but you can use an effective caching strategy to reduce load on backend databases by reducing sizing and scaling requirements. This can help you reduce costs and improve the performance of your applications. Caching is a useful technique to save on costs related to read heavy workloads that use more expensive resources such as SQL Server. (https://docs.aws.amazon.com/prescriptive-guidance/latest/optimize-costs-microsoft-workloads/net-caching.html)"
-                                
+            
+                    
     </i> 
-
 Essential reading:
 
 - [Best practices development](https://learn.microsoft.com/pt-br/azure/azure-cache-for-redis/cache-best-practices-development)
@@ -37,12 +37,9 @@ Use examples images (Microsoft, Azure):
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://br.linkedin.com/in/luiza-andrade-ti/)  [![git](https://img.shields.io/badge/github-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/luizaandradeti/) 
 
 
-
-
 - [Redis with Spring Boot](#redis-with-spring-boot)
 - [Tech Stack](#tech-stack--)
     * [Redis](#redis)
-    * [Workflow](#workflow-for-pull-requests-)
 - [Hands on Redis](#hands-on-redis)
     * [Redis with Spring](#redis-with-spring)
         + [Run Redis Docker](#run-redis-docker)
@@ -52,15 +49,9 @@ Use examples images (Microsoft, Azure):
         + [Cache enable](#cache-enable)
         + [Results](#results)
 - [TO DO - Deploy in Azure Kubernetes](#to-do---deploy-in-azure-kubernetes)
-    * [Azure cache for Redis](#azure-cache-for-redis)
-        + [Connecting to azure cloud via azure cli](#run-the-bash-install_redis-below) 
-        + [Create a service Redis into Azure](#create-a-redis-azure-)
-        + [Connect Redis Azure For Redis with Java](#connect-azure-cache-for-redis-with-java-setup-the-test-in-main-class-)
+    * [Connecting to azure cloud via azure cli](#connecting-to-the-azure-cloud-via-azure-cli)
     * [Docker build](#docker-build)
 
-> [!NOTE] 
-> The context of these personal studies is strictly technical. There is no interest whatsoever in addressing political and religious issues.
-> Please do not use any terms out of context.
 
 
 ## Tech Stack
@@ -110,7 +101,7 @@ As per picture below:
 
 ### Run Redis Docker
 
-Run docker redis in prompt
+Run docker redis in terminal
 
 ```bash
 docker pull redis:8.0-M04-alpine
@@ -244,7 +235,6 @@ I hope this documentation is useful!
 
 ![Redis](imgs/3.png)
 
-
 ### TO DO - Deploy in Azure Kubernetes
 
 [![Generic badge](https://img.shields.io/badge/status-developing-yellow.svg)](/#/)
@@ -282,7 +272,7 @@ https://learn.microsoft.com/pt-br/cli/azure/get-started-tutorial-1-prepare-envir
 Connect-AzAccount -UseDeviceAuthentication
 
 # Create Resource Group 
-New-AzResourceGroup -Name RecGroupAKSCLI -Location "BrazilSouth"
+New-AzResourceGroup -Name RGAKSCLI -Location "BrazilSouth"
 ```
 
 With the credentials provisioned by the cloud administrator, sign in to your Microsoft account.
@@ -298,97 +288,10 @@ https://learn.microsoft.com/pt-br/entra/fundamentals/users-reset-password-azure-
 https://learn.microsoft.com/pt-br/microsoft-365/troubleshoot/sign-in/forgot-sign-in-password
 https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account
 ![create](imgs/account-create.png)
-
-### Azure cache for Redis
-
-To install Redis on Windows, you'll first need to enable WSL2 (Windows Subsystem for Linux). WSL2 lets you run Linux binaries natively on Windows. For this method to work, you'll need to be running Windows 10 version 2004 and higher or Windows 11. (https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/install-redis-on-windows/)
-
-#### Run the bash install_redis below
-```
-📦kubernetes-redis-java
- ┣ 📂imgs
- ┣ 📂src
- ┣ 📜acr.azcli
- ┣ 📜Dockerfile
- ┣ 📜install_redis.sh
- ┣ 📜mvnw
- ┣ 📜mvnw.cmd
- ┣ 📜pom.xml
- ┗ 📜readme.md
-```
-
-
-![Redis site](imgs/redis1.png)
-
-#### Create a Redis Azure ⚡
-
-Create a Redis Azure
-![Redis site](imgs/redis3.png)
-
-The creation time is exactly the same as drinking a coffee. Wait a few minutes...
-![Redis site](imgs/redis4.png)
-
-
-
-![Redis site](imgs/redis5.png)
-#### Connect Azure Cache for Redis with Java, setup the test in main class ⏬
-
-```java
-package com.kubernetes_hosted.azure;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.core.ValueOperations;
-
-@SpringBootApplication
-public class AzureApplication implements CommandLineRunner {
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AzureApplication.class);
-
-	@Autowired
-	private StringRedisTemplate template;
-
-	public static void main(String[] args) {
-		SpringApplication.run(AzureApplication.class, args);
-	}
-
-	@Override
-	public void run(String... args) {
-		ValueOperations<String, String> ops = this.template.opsForValue();
-		String key = "testkeyaccess";
-		if(!this.template.hasKey(key)){
-			ops.set(key, "Hello World!!!!!!!!!!!!!!!!!!");
-			LOGGER.info("Add a key is OK");
-		}
-		LOGGER.info("Please system, return the value from the cache, thanks! Where is? ... {}", ops.get(key));
-	}
-}
-``` 
-
-````properties
-spring.application.name=azure
-##---------------redis-----------------
-spring.data.redis.host=<your-redis-name>.redis.cache.windows.net
-spring.data.redis.port=6380
-spring.data.redis.password==
-spring.data.redis.ssl.enabled=true
-# clear cache in 70000ms
-cache.ms.ttl=70000
-spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
-````
-
 ## Docker build
 ````ps1
 az login
-az acr create --resource-group RecGroupAKSCLI --name containerappwebredis --sku Basic
+az acr create --resource-group RGAKSCLI --name containerappwebredis --sku Basic
 docker build -t apiweb .
 docker images
 docker container ls
@@ -405,8 +308,15 @@ docker run -d -p 8080:8080 containerappwebredis.azurecr.io/apiweb:latest
 
 ![acr](imgs/acr2.png)
 
+You can also use the graphical (GUI) mode to create:
 ![create](imgs/create.png)
 ![gui](imgs/creategui.png)
+
+The reason why large companies use <u>Infrastructure as code is that it increases security</u>, since Terraform, for example, when uploaded to Git, needs to go through the code conveyor belt, and there are security filters on the code conveyor belt. In addition, it is possible to version the improvements.
+
+<i> <font size="1">
+    "Main design strategies: As discussed in the Supply Chain and Tooling and Process Standardization guides , you should have a strict policy of deploying infrastructure changes (including configuration changes) only through code. You should deploy IaC through your CI/CD (continuous integration and continuous delivery) pipelines. Adopting these policies enforces process consistency for all IaC deployments, minimizes the risk of configuration drift across your environments, and ensures infrastructure consistency across your environments."
+</i> </font>
 
 - https://learn.microsoft.com/pt-br/azure/well-architected/operational-excellence/infrastructure-as-code-design
 - https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/infrastructure-as-code-design
@@ -417,86 +327,14 @@ docker run -d -p 8080:8080 containerappwebredis.azurecr.io/apiweb:latest
 
 
 **Read more (further reading):**
-- Plans: https://azure.microsoft.com/en-us/support/plans
-- Personal x Business plan: https://support.microsoft.com/en-us/office/what-s-the-difference-between-microsoft-365-plans-for-home-or-business-31c36a5d-a13d-4b7d-9b1f-2076accbeeab
-
-- Entra ID: https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id (Azure Active Directory is now Microsoft Entra ID.)
+- https://azure.microsoft.com/pt-br/support/plans
+- https://azure.microsoft.com/en-us/support/plans
+  
+- https://www.microsoft.com/pt-br/security/business/identity-access/microsoft-entra-id (Azure Active Directory agora é Microsoft Entra ID)
+- https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id (Azure Active Directory is now Microsoft Entra ID.)
   
 - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits
+- https://learn.microsoft.com/pt-br/azure/azure-resource-manager/management/azure-subscription-service-limits
 
-- ACR: https://azure.microsoft.com/en-us/products/container-registry
-
-
-### Azure AKS start
-
-#### AKS variables
-### Workflow for Pull requests:
-
-Linux
-```bash
-export RANDOM_ID="$(openssl rand -hex 3)"
-export MY_RESOURCE_GROUP_NAME="myRecGroupCluster$RANDOM_ID"
-export REGION="brazilsouth"
-export MY_AKS_CLUSTER_NAME="myAKSCluster$RANDOM_ID"
-export MY_DNS_LABEL="mydnslabel$RANDOM_ID"
-
-```
-
-Windows
-```bash
-set MY_RESOURCE_GROUP_NAME="myRecGroupClusterXyz
-set REGION="brazilsouth"
-set MY_AKS_CLUSTER_NAME="myAKSClusterXyz"
-set MY_DNS_LABEL="mydnslabelXyz
-```
-
-Create AKS Cluster
-
-```bash
-az group create --name $_RESOURCE_GROUP_NAME --location $REGION
-az aks create --name $_AKS_CLUSTER_NAME  --node-count 1  --generate-ssh-keys
-```
-
-
->[!TIP]
->
->Azure plugin
-
-![Plugin](imgs/plugin.png)
-
-### Workflow 
-
-![workflow](imgs/azure.png)
-
->[!NOTE] 
->
-> Official documentation:
-> 
-> https://learn.microsoft.com/en-us/azure/aks/learn/quick-kubernetes-deploy-portal?tabs=azure-
-
-![workflow](imgs/workflow.png)
-
-![workflow](imgs/openproject-org-git-workflow.png)
-
-
-
-
--  https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-deployments/managing-environments-for-deployment
--  https://www.reddit.com/
--  https://azure.microsoft.com/en-us/products/deployment-environments
--  https://docs.github.com/pt/actions/use-cases-and-examples/deploying/deploying-to-azure-kubernetes-service
--  https://learn.microsoft.com/en-us/azure/aks/aksarc/overview
--  https://www.openproject.org/docs/development/git-workflow/
-
-
-
-----------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-Status: Still in development
+- https://azure.microsoft.com/en-us/products/container-registry
+- https://azure.microsoft.com/pt-br/products/container-registry
