@@ -73,13 +73,6 @@ Use examples images (Microsoft, Azure):
 
 
 ## Redis 
-
-<i>"Redis can be used as a database, cache, streaming engine, message broker, and more. The following quick start guides will show you how to use Redis for the following specific purposes:
-
-Data structure store
-Document database
-Vector database." </i>
-
 Redis can be used with lists, sets, maps, strings e others. 
 https://redis.io/docs/latest/develop/get-started/
 
@@ -263,7 +256,7 @@ https://learn.microsoft.com/pt-br/cli/azure/install-azure-cli-windows?pivots=win
 
 The official documentation is excellent for understanding the following commands. Read it.
 ![doc](imgs/doc.png)
-Let's continue! 
+
 https://learn.microsoft.com/pt-br/cli/azure/get-started-tutorial-1-prepare-environment?tabs=bash
 
 **Connect:**
@@ -272,13 +265,13 @@ https://learn.microsoft.com/pt-br/cli/azure/get-started-tutorial-1-prepare-envir
 Connect-AzAccount -UseDeviceAuthentication
 
 # Create Resource Group 
-New-AzResourceGroup -Name RGAKSCLI -Location "BrazilSouth"
+New-AzResourceGroup -Name RGAKSCLI -Location ""
 ```
 
 With the credentials provisioned by the cloud administrator, sign in to your Microsoft account.
 ![logar](imgs/logar.png)
 If you don't have access yet, or if you lose it, you can easily recover this information by asking your technology administrator authorized, who will retrieve it via Entra ID.
-You can also create an account with a free trial period if you're just learning. Azure provides that!
+You can also create an account with a free trial period if you're just learning. 
 
 https://learn.microsoft.com/pt-br/entra/fundamentals/users-reset-password-azure-portal
 ![recover1](imgs/recovery.png)
@@ -325,16 +318,9 @@ The reason why large companies use <u>Infrastructure as code is that it increase
 ![pipe](imgs/pipe_.png)
 - https://blog.trendmicro.com.br/tornando-pipeline-de-iac-mais-seguro/
 
-
-**Read more (further reading):**
-- https://azure.microsoft.com/pt-br/support/plans
-- https://azure.microsoft.com/en-us/support/plans
-  
-- https://www.microsoft.com/pt-br/security/business/identity-access/microsoft-entra-id (Azure Active Directory agora é Microsoft Entra ID)
-- https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id (Azure Active Directory is now Microsoft Entra ID.)
-  
+**Read more :**
+- https://azure.microsoft.com/en-us/support/plans  
+- https://www.microsoft.com/en-us/security/business/identity-access/microsoft-entra-id   
 - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits
-- https://learn.microsoft.com/pt-br/azure/azure-resource-manager/management/azure-subscription-service-limits
-
 - https://azure.microsoft.com/en-us/products/container-registry
-- https://azure.microsoft.com/pt-br/products/container-registry
+
