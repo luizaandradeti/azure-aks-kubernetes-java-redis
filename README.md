@@ -8,7 +8,6 @@
 > 
 > Os conteúdos deste repositório não foram revisados ainda. 
  
-ositório não foram revisados ainda. 
 Benefitis of Redis:
 
 [![My Skills](https://skillicons.dev/icons?i=azure,java,redis,kubernetes,docker,spring)](https://skillicons.dev)
