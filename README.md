@@ -6,7 +6,7 @@
 
 >[!NOTE]
 > 
-> Os conteúdos deste repositório não foram revisados ainda. 
+> Os conteúdos deste repositório não foram concluidos ainda. 
  
 Benefitis of Redis:
 
