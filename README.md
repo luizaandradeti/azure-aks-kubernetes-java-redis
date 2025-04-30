@@ -333,4 +333,4 @@ The reason why large companies use <u>Infrastructure as code is that it increase
 
 >[!NOTE]
 > 
-> Repository for personal and professional study purposes
+> Repository for professional study purposes
