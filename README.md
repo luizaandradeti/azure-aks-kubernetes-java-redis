@@ -285,7 +285,7 @@ https://learn.microsoft.com/pt-br/entra/fundamentals/users-reset-password-azure-
 
 
 ![recover](imgs/resp.png)
-
+https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility
 ![recover](imgs/resp2.png)
 
 
