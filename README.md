@@ -4,9 +4,6 @@
 [![Generic badge](https://img.shields.io/badge/status-developing-yellow.svg)](/#/)
 
 
->[!NOTE]
-> 
-> Os conteúdos deste repositório não foram concluidos ainda. 
  
 Benefitis of Redis:
 
@@ -332,3 +329,8 @@ The reason why large companies use <u>Infrastructure as code is that it increase
 - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits
 - https://azure.microsoft.com/en-us/products/container-registry
 
+
+
+>[!NOTE]
+> 
+> Repository for personal and professional study purposes
