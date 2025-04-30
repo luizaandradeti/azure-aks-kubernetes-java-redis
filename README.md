@@ -283,6 +283,12 @@ https://learn.microsoft.com/pt-br/entra/fundamentals/users-reset-password-azure-
 
 ![recover](imgs/rec1.png)
 
+
+![recover](imgs/resp.png)
+
+![recover](imgs/resp2.png)
+
+
 https://learn.microsoft.com/pt-br/microsoft-365/troubleshoot/sign-in/forgot-sign-in-password
 https://azure.microsoft.com/en-us/pricing/purchase-options/azure-account
 ![create](imgs/account-create.png)
