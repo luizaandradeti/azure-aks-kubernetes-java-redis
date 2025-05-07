@@ -326,7 +326,8 @@ The reason why large companies use <u>Infrastructure as code is that it increase
 - https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/infrastructure-as-code-design
 
 ![example](imgs/example.png)
-![pipe](imgs/pipe_.png)
+
+[![pipe](imgs/pipe_.png)](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/main/imgs/pipe_.png)
 - https://blog.trendmicro.com.br/tornando-pipeline-de-iac-mais-seguro/
 
 **Read more :**
