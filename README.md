@@ -31,7 +31,7 @@ Use examples images (Microsoft, Azure):
 [![exemplo](imgs/exemplo.png)](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/imgs/exemplo.png)
 
 
-[![exemplo](imgs/exemplo.PNG)](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/main/imgs/exemplo.PNG)
+[![exemplo2](imgs/exemplo2.PNG)](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/main/imgs/exemplo2.PNG)
 
 
 - https://azure.microsoft.com/en-us/pricing/calculator/
