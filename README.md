@@ -28,11 +28,10 @@ Essential reading:
   
 Use examples images (Microsoft, Azure):
 
-[![exemplo](imgs/exemplo.png)
-](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/6a52d6e81d466e42138aa5d9894003c0613182e4/imgs/exemplo.png)
+[![exemplo](imgs/exemplo.png)](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/imgs/exemplo.png)
 
 
-[![exemplo](imgs/exemplo2.PNG)](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/main/imgs/exemplo2.PNG)
+[![exemplo](imgs/exemplo.PNG)](https://github.com/luizaandradeti/azure-aks-kubernetes-java-redis/blob/main/imgs/exemplo.PNG)
 
 
 - https://azure.microsoft.com/en-us/pricing/calculator/
