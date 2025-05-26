@@ -1,7 +1,7 @@
 # Redis with Spring Boot
 
 
-[![Generic badge](https://img.shields.io/badge/status-developing-pink.svg)](/#/)
+[![Generic badge](https://img.shields.io/badge/status-developing-purple.svg)](/#/)
 
 
  
